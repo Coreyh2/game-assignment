@@ -1,0 +1,73 @@
+import time.sleep
+def displayIntro():
+    print ('You are on a game show where you pick doors and win prizes')
+    print ('you can pick two doors')
+    print ('one gives you a prize and a option to advance')
+    print ('the other is the exit. meaning you lose')
+    print
+    
+def chooseDoor():
+    door = ''
+    while  door == '':
+        print ('Which Door will you pick? (1 or 2)')
+        door = raw_input()
+    return door
+           
+def checkDoor(chosenDoor):
+    print ('You approach the door...')
+    time.sleep(2)
+    print ('The Exitment Growing...')
+    time.sleep(2)
+    print ('You open the selected door and...')
+    print
+    time.sleep(2)
+    
+
+    
+    
+    door1 = 1
+    door2 = 2 
+    door3 = 3
+    door4 = 4
+    door5 = 5
+    door6 = 6
+    door7 = 7
+    door8 = 8 
+    if chosenDoor == str(door1):
+        print ('You Lost')
+    else:
+        if chosenDoor == str(door2):
+            door2 = ''
+            while  door == '':
+                print ('Now please pick Door (A or B)')
+                door2 = raw_input()
+            return door2
+        else:
+            if chosenDoor == str(door3):
+                door3 = ''
+                while  door3 == '':
+                    print ('You are locked in a cage')
+                    door3 = raw_input()
+                return door3
+            else:
+                if chosenDoor == str(door4):
+                    door4 = ''
+                    while  door4 == '':
+                        print ('Which Door will you pick? (A or B)')
+                        door4 = raw_input()
+                    return door4
+
+def main():
+     
+    playAgain = 'yes'
+    while playAgain == 'yes' or playAgain == 'y':
+        displayIntro()
+        doorNumber = chooseDoor()
+        checkDoor(doorNumber)
+ 
+     
+        print ('Do you want to play again? (yes or no)')
+        playAgain = raw_input()
+ 
+ 
+if __name__ == "__main__": main()
